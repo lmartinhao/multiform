@@ -38,6 +38,12 @@ export const IconArea = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  svg {
+    color: white;
+    width: 24px;
+    height: 24px;
+  }
 `
 
 export const Point = styled.div`

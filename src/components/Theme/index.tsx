@@ -3,6 +3,8 @@ import { Header } from '../Header'
 import { SidebarItem } from '../SidebarItem'
 import * as C from './styles'
 
+import Book from '../../assets/book.svg'
+
 type Props = {
   children: ReactNode
 }

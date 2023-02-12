@@ -1,3 +1,4 @@
+import { BookOpen, Envelope, UserCircle } from 'phosphor-react'
 import { Link } from 'react-router-dom'
 import * as C from './styles'
 
@@ -16,7 +17,11 @@ export function SidebarItem({ title, description, icon, path }: Props) {
           <C.Title>{title}</C.Title>
           <C.Description>{description}</C.Description>
         </C.Info>
-        <C.IconArea>{icon}</C.IconArea>
+        <C.IconArea>
+          {icon === 'profile' && <UserCircle weight="fill" />}
+          {icon === 'book' && <BookOpen weight="fill" />}
+          {icon === 'mail' && <Envelope weight="fill" />}
+        </C.IconArea>
         <C.Point></C.Point>
       </Link>
     </C.Container>
