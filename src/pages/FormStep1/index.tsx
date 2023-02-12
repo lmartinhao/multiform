@@ -1,16 +1,27 @@
+import { ChangeEvent, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useForm, FormActions } from '../../contexts/FormContext'
 
 import { Theme } from '../../components/Theme'
-import { StepOneContainer } from './styles'
-import { ChangeEvent } from 'react'
+import { Container } from './styles'
 
 export function FormStep1() {
   const navigate = useNavigate()
   const { state, dispatch } = useForm()
 
+  useEffect(() => {
+    dispatch({
+      type: FormActions.setCurrentStep,
+      payload: 1,
+    })
+  }, [])
+
   function handleNextStep() {
-    navigate('/step2')
+    if (state.name !== '') {
+      navigate('/step2')
+    } else {
+      alert('Preencha os dados')
+    }
   }
 
   function handleNameChange(e: ChangeEvent<HTMLInputElement>) {
@@ -22,8 +33,8 @@ export function FormStep1() {
 
   return (
     <Theme>
-      <StepOneContainer>
-        <p>Passo 1/3 - {state.name}</p>
+      <Container>
+        <p>Passo 1/3</p>
         <h1>Vamos começar com o seu nome</h1>
         <p>Preencha o campo abaixo com o seu nome completo.</p>
 
@@ -40,7 +51,7 @@ export function FormStep1() {
         </label>
 
         <button onClick={handleNextStep}>Próximo</button>
-      </StepOneContainer>
+      </Container>
     </Theme>
   )
 }
