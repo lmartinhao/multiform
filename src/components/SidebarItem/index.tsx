@@ -7,9 +7,10 @@ type Props = {
   description: string
   icon: string
   path: string
+  active: boolean
 }
 
-export function SidebarItem({ title, description, icon, path }: Props) {
+export function SidebarItem({ title, description, icon, path, active }: Props) {
   return (
     <C.Container>
       <Link to={path}>
@@ -17,12 +18,12 @@ export function SidebarItem({ title, description, icon, path }: Props) {
           <C.Title>{title}</C.Title>
           <C.Description>{description}</C.Description>
         </C.Info>
-        <C.IconArea>
+        <C.IconArea active={active}>
           {icon === 'profile' && <UserCircle weight="fill" />}
           {icon === 'book' && <BookOpen weight="fill" />}
           {icon === 'mail' && <Envelope weight="fill" />}
         </C.IconArea>
-        <C.Point></C.Point>
+        <C.Point active={active}></C.Point>
       </Link>
     </C.Container>
   )
