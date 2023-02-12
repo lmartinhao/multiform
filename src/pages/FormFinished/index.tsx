@@ -27,7 +27,7 @@ export function FormFinished() {
         <p>Formulário enviado!</p>
         <h1>Agradecemos seu cadastro</h1>
         <p>
-          Em breve você receberá um email com as informações do seu novo
+          Em breve você receberá um email com as informações sobre seu novo
           emprego.
         </p>
 
