@@ -22,7 +22,7 @@ export function FormStep3() {
 
   function handleNextStep() {
     if (state.email !== '' && state.github !== '') {
-      console.log(state)
+      navigate('/finished')
     } else {
       alert('Preencha os dados')
     }

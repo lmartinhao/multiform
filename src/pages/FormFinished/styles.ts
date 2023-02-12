@@ -30,11 +30,21 @@ export const Container = styled.div`
     cursor: pointer;
     margin-top: 30px;
   }
+`
 
-  a {
-    text-decoration: none;
+export const UserData = styled.div`
+  margin-left: 30px;
+
+  p {
+    display: flex;
+    flex-direction: row;
     font-size: 16px;
-    padding: 20px 40px;
-    color: #b8b8d4;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    color: white;
+    margin-right: 8px;
   }
 `
