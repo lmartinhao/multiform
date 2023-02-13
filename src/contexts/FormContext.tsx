@@ -1,4 +1,4 @@
-// 1. Context (a caixinha que vai armazenar os dapos)
+// 1. Context (a caixinha que vai armazenar os dados)
 // 2. Reducer (agrupamento de ações específicas)
 // 3. Provider (o ambiente)
 // 4. Hook (vai simplificar o processo de acesso ao provider)
